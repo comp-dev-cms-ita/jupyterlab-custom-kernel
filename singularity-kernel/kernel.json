@@ -1,5 +1,19 @@
 {
-  "argv": [],
+  "argv": [
+    "singularity",
+    "exec",
+    "-B",
+    "/cvmfs:/cvmfs",
+    "-B",
+    "/opt/workspace:/opt/workspace",
+    "--cleanenv",
+    "/cvmfs/images.dodas.infn.it/registry.hub.docker.com/dodasts/root-in-docker:ubuntu22-kernel-v1",
+    "python3",
+    "-m",
+    "ipykernel",
+    "-f",
+    "{connection_file}"
+  ],
   "display_name": "Singularity kernel",
   "language": "python",
   "metadata": {
