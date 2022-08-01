@@ -1,0 +1,34 @@
+{
+  "argv": [],
+  "display_name": "Singularity kernel",
+  "language": "python",
+  "metadata": {
+    "template": {
+      "tpl": {
+        "argv": [
+          "singularity",
+          "exec",
+          "-B",
+          "/cvmfs:/cvmfs",
+          "-B",
+          "/opt/workspace:/opt/workspace",
+          "--cleanenv",
+          "{singularity_image}",
+          "python3",
+          "-m",
+          "ipykernel",
+          "-f",
+          "{connection_file}"
+        ],
+        "display_name": "Python kernel from image {singularity_image}"
+      },
+      "parameters": {
+        "singularity_image": {
+          "type": "string",
+          "title": "Configure singularity image to load the kernel from",
+          "default": "/cvmfs/images.dodas.infn.it/registry.hub.docker.com/dodasts/root-in-docker:ubuntu22-kernel-v1"
+        }
+    }
+  }
+}
+}
