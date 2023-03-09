@@ -1,74 +1,49 @@
 {
   "argv": [
-    "python",
+    "singularity",
+    "exec",
+    "-B",
+    "/cvmfs:/cvmfs",
+    "-B",
+    "/opt/workspace:/opt/workspace",
+    "--cleanenv",
+    "/cvmfs/images.dodas.infn.it/registry.hub.docker.com/dodasts/root-in-docker:ubuntu22-kernel-v1",
+    "python3",
     "-m",
-    "ipykernel_launcher",
+    "ipykernel",
     "-f",
-    "{connection_file}",
-    "--cache-size={cache_size}",
-    "--matplotlib={matplotlib}"
+    "{connection_file}"
   ],
-  "display_name": "Python 3.8 Template 1",
+  "display_name": "Singularity kernel",
   "language": "python",
   "metadata": {
     "template": {
       "tpl": {
         "argv": [
-          "python",
+          "singularity",
+          "exec",
+          "-B",
+          "/cvmfs:/cvmfs",
+          "-B",
+          "/opt/workspace:/opt/workspace",
+          "--cleanenv",
+          "{singularity_image}",
+          "python3",
           "-m",
-          "ipykernel_launcher",
+          "ipykernel",
           "-f",
-          "{connection_file}",
-          "--cache-size={cache_size_map}",
-          "--matplotlib={matplotlib}",
-          "--logfile={logfile}",
-          "--Kernel._poll_interval={poll_interval}"
+          "{connection_file}"
         ],
-        "display_name": "Python cache_size {cache_size_map} matplotlib {matplotlib}"
+        "display_name": "Python kernel from image {singularity_image}"
       },
       "parameters": {
-        "poll_interval": {
-          "type": "number",
-          "minimum": 0.01,
-          "maximum": 1,
-          "multipleOf": 0.01,
-          "title": "Kernel pool interval in seconds",
-          "default": 0.01
-        },
-        "cache_size": {
-          "type": "integer",
-          "title": "Set the size of the cache",
-          "default": "Medium",
-          "enum": [
-            "Small",
-            "Medium",
-            "Big"
-          ]
-        },
-        "matplotlib": {
+        "singularity_image": {
           "type": "string",
-          "title": "Configure matplotlib for interactive use with the default matplotlib backend",
-          "default": "widget",
-          "enum": [
-            "auto", "agg", "gtk", "gtk3", "inline", "ipympl", "nbagg", "notebook", 
-            "osx", "pdf", "ps", "qt", "qt4", "qt5", "svg", "tk", "widget", "wx"
-          ]
-        },
-        "logfile": {
-          "type": "string",
-          "title": "Set the path for the logfile",
-          "default": "/tmp/kernel.out"
+          "title": "Configure singularity image to load the kernel from",
+          "default": "/cvmfs/images.dodas.infn.it/registry.hub.docker.com/dodasts/root-in-docker:ubuntu22-kernel-v1"
         }
       },
-      "mapping": {
-        "cache_size_map": {
-          "cache_size": {
-            "Small": "102400",
-            "Medium": "512000",
-            "Big": "1048576000"
-          }
-        }
-      }
+      "mapping": {}
     }
   }
 }
