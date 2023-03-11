@@ -51,6 +51,7 @@ setup_args = dict(
     packages=setuptools.find_packages(),
     install_requires=[
         "jupyter_server>=1.6,<2",
+        "jupyter-packaging>=0.12.3",
         "psutil",
         "ulid-py",
     ],
@@ -78,7 +79,7 @@ if editable_install:
     print("If you are building a sdist or wheel, those may be corrupted.")
 else:
 
-    from jupyter_packaging import wrap_installers, npm_builder, get_data_files
+    from jupyter_packaging.setupbase import wrap_installers, npm_builder, get_data_files
 
     post_develop = npm_builder(
         build_cmd="install:extension", source_dir="src", build_dir=lab_path
