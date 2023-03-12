@@ -85,7 +85,7 @@
   ],
   "jupyterlab": {
     "extension": true,
-    "outputDir": "jupyterlab-custom-kernel/labextension",
+    "outputDir": "jupyterlab_custom_kernel/labextension",
     "discovery": {
       "server": {
         "managers": [

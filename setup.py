@@ -10,7 +10,7 @@ import setuptools
 HERE = Path(__file__).parent.resolve()
 
 # The name of the project
-name = "jupyterlab_custom_kernel"
+name = "jupyterlab-custom-kernel"
 
 lab_path = HERE / name.replace("-", "_") / "labextension"
 
