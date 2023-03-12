@@ -15,7 +15,7 @@ for wheel_file in wheel_list:
     statics = [f for f in filenames if 'labextension/static' in f]
     if len(statics) < 20:
         sys.exit(f"less static file than expected in wheel  {len(statics)}/20")
-    labex = [f for f in filenames if 'labextensions/@deshaw/jupyterlab-ksmm' in f]
+    labex = [f for f in filenames if 'labextensions/@dciangot/jupyterlab-custom-kernel' in f]
     if len(labex) < 22:
         sys.exit(f"less labextension files file than expected in wheel  {len(static)}/22")
 print('ok')

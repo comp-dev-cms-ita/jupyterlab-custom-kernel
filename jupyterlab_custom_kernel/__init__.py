@@ -15,7 +15,7 @@ def _jupyter_labextension_paths():
 
 
 def _jupyter_server_extension_points():
-    return [{"module": "ksmm"}]
+    return [{"module": "jupyterlab_custom_kernel"}]
 
 
 def _load_jupyter_server_extension(server_app):

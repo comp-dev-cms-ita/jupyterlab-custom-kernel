@@ -10,14 +10,14 @@ import setuptools
 HERE = Path(__file__).parent.resolve()
 
 # The name of the project
-name = "ksmm"
+name = "jupyterlab_custom_kernel"
 
 lab_path = HERE / name.replace("-", "_") / "labextension"
 
 # Representative files that should exist after a successful build
 ensured_targets = [str(lab_path / "package.json"), str(lab_path / "static/style.js")]
 
-labext_name = "@deshaw/jupyterlab-ksmm"
+labext_name = "@dciangot/jupyterlab-custom-kernel"
 
 data_files_spec = [
     (

@@ -9,14 +9,14 @@ import 'core-js';
  * The command IDs used by the to create a kernelspec.
  */
 namespace CommandIDs {
-  export const create = "ksmm:create-kernelspec";
+  export const create = "jupyterlab-custom-kernel:create-kernelspec";
 }
 
 /**
  * Initialization data for the ksmm extension.
  */
 const ksmmExtension: JupyterFrontEndPlugin<void> = {
-  id: "jupyterlab-ksmm-plugin",
+  id: "jupyterlab-custom-kernel-plugin",
   autoStart: true,
   //optional: [ILauncher],
   activate: (app: JupyterFrontEnd, launcher: ILauncher) => {

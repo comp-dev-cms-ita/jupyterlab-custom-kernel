@@ -1,6 +1,6 @@
 {
-  "name": "@dciangot/jupyterlab-ksmm",
-  "version": "0.1.7",
+  "name": "@dciangot/jupyterlab-custom-kernel",
+  "version": "0.0.2",
   "description": "An extension to manage Kernelspecs from JupyterLab",
   "keywords": [
     "jupyter",
@@ -9,9 +9,9 @@
     "ipython",
     "kernel"
   ],
-  "homepage": "https://github.com/deshaw/ksmm",
+  "homepage": "https://github.com/dciangot/jupyterlab-custom-kernel",
   "bugs": {
-    "url": "https://github.com/deshaw/ksmm/issues"
+    "url": "https://github.com/dciangot/jupyterlab-custom-kernel/issues"
   },
   "license": "BSD-3-Clause",
   "files": [
@@ -23,7 +23,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/deshaw/ksmm"
+    "url": "https://github.com/dciangot/jupyterlab-custom-kernel"
   },
   "scripts": {
     "build": "jlpm run build:lib && jlpm run build:labextension:dev",
@@ -85,7 +85,7 @@
   ],
   "jupyterlab": {
     "extension": true,
-    "outputDir": "ksmm/labextension",
+    "outputDir": "jupyterlab-custom-kernel/labextension",
     "discovery": {
       "server": {
         "managers": [

@@ -10,7 +10,7 @@ import tornado
 from jupyter_server.base.handlers import APIHandler
 from jupyter_server.utils import url_path_join
 
-from ksmm.templating import format_tpl
+from jupyterlab_custom_kernel.templating import format_tpl
 
 from .kernel_schema import kernel_schema
 
