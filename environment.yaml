@@ -1,4 +1,4 @@
-name: ksmm
+name: jupyterlab_custom_kernel
 channels:
   - conda-forge
 dependencies:

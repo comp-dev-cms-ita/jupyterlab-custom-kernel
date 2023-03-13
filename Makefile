@@ -2,7 +2,7 @@ CONDA_ACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda activ
 CONDA_DEACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda deactivate
 CONDA_REMOVE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda remove -y --all -n
 
-ENV_NAME=ksmm
+ENV_NAME=jupyterlab-custom-kernel
 
 .PHONY: clean build dist env cp
 
@@ -53,7 +53,7 @@ install-kernelspecs:
 jlab:
 	($(CONDA_ACTIVATE) ${ENV_NAME}; \
 		jupyter lab \
-			--ServerApp.jpserver_extensions="{'ksmm': True}" \
+			--ServerApp.jpserver_extensions="{'jupyterlab-custom-kernel': True}" \
 			--no-browser \
 			--port 8234)
 
@@ -61,7 +61,7 @@ jlab-watch:
 	($(CONDA_ACTIVATE) ${ENV_NAME}; \
 		jupyter lab \
 			--watch \
-			--ServerApp.jpserver_extensions="{'ksmm': True}" \
+			--ServerApp.jpserver_extensions="{'jupyterlab-custom-kernel': True}" \
 			--port 8234)
 
 watch:
@@ -70,7 +70,7 @@ watch:
 
 main:
 	($(CONDA_ACTIVATE) ${ENV_NAME}; \
-		python -m ksmm )
+		python -m jupyterlab_custom_kernel )
 
 build_release:
 	($(CONDA_ACTIVATE) ${ENV_NAME}; \

@@ -1,4 +1,4 @@
-"""ksmm setup
+"""jupyterlab_custom_kernel setup
 """
 
 import json

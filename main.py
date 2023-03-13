@@ -1,6 +1,6 @@
 from prompt_toolkit.shortcuts import radiolist_dialog, input_dialog
 
-from ksmm.kernelspec_templating import reformat_tpl, extract_parameters
+from jupyterlab_custom_kernel.kernelspec_templating import reformat_tpl, extract_parameters
 
 from glob import glob
 import json
