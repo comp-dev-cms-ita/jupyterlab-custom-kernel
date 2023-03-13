@@ -1,7 +1,7 @@
 {
   "ServerApp": {
     "jpserver_extensions": {
-      "ksmm": true
+      "jupyterlab_custom_kernel": true
     }
   }
 }
