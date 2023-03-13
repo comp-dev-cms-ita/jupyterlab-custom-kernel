@@ -18,7 +18,7 @@ namespace CommandIDs {
 const ksmmExtension: JupyterFrontEndPlugin<void> = {
   id: "jupyterlab-custom-kernel-plugin",
   autoStart: true,
-  //optional: [ILauncher],
+  optional: [ILauncher],
   activate: (app: JupyterFrontEnd, launcher: ILauncher) => {
     const { commands, serviceManager } = app;
     const command = CommandIDs.create;
